@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --primary-background: #131313;
+  --secondary-background: #303030;
+  --primary-color: #f2f2f2;
+}
+body {
+  background: var(--primary-background);
+  color: var(--primary-color);
+}
+.container {
+  display: flex;
+  min-height: 100dvh;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  background: var(--secondary-background);
+  text-align: center;
+  padding: 4em 1.5em;
+  border-radius: 10px;
+  width: 300px;
+}
+.text-2xl {
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+  border: 0.5px solid orange;
+  padding: 8px;
+  position: relative;
+
+  & input {
+    width: 100%;
+    outline: none;
+    background: inherit;
+    border: none;
+    color: var(--primary-color);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  & hr {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 42px;
+    border: none;
+    width: 0.5px;
+    background-color: orange;
+  }
+
+  & svg {
+    height: 30px;
+    width: 30px;
+    fill: orange;
+  }
+}
+#form-btn {
+  display: inline-block;
+  margin-top: 3em;
+  padding: 12px;
+  background-color: orange;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.small-text {
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-top: 2em;
+}
+
+.error-message {
+  font-size: 0.7rem;
+  color: red;
+  list-style-position: inside;
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 450px) {
+  .form-container {
+    width: initial;
+  }
+  .container {
+    padding: 1em;
+  }
+}

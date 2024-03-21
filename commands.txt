@@ -1,0 +1,2 @@
+celery -A Newsletter worker --pool=solo -l INFO
+celery -A Newsletter beat
